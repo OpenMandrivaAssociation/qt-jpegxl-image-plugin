@@ -1,10 +1,10 @@
-%define date 20210915
+#define date 20210915
 
 Summary:	Qt plugin for handling JPEG XL images
 Name:		qt-jpegxl-image-plugin
-Version:	0.2.1
+Version:	0.3.1
 Release:	%{?date:0.%{date}.}1
-Source0:	https://github.com/novomesk/qt-jpegxl-image-plugin/archive/main/%{name}-%{version}%{?date:-%{date}}.tar.gz
+Source0:	https://github.com/novomesk/qt-jpegxl-image-plugin/archive/%{?date:main/%{name}-%{version}-%{date}}%{!?date:refs/tags/v%{version}}.tar.gz
 BuildRequires:	cmake ninja
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
@@ -19,7 +19,7 @@ Supplements:	%mklibname qt5gui 5
 Qt plugin for handling JPEG XL images
 
 %prep
-%autosetup -p1 -n %{name}-main
+%autosetup -p1 %{?date:-n %{name}-main}
 %cmake_kde5 \
 	-DENABLE_BSYMBOLICFUNCTIONS:BOOL=ON \
 	-G Ninja
