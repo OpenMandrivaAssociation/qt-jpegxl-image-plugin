@@ -2,7 +2,7 @@
 
 Summary:	Qt plugin for handling JPEG XL images
 Name:		qt-jpegxl-image-plugin
-Version:	0.6.4
+Version:	0.7.0
 Release:	%{?date:0.%{date}.}1
 Source0:	https://github.com/novomesk/qt-jpegxl-image-plugin/archive/%{?date:main/%{name}-%{version}-%{date}}%{!?date:refs/tags/v%{version}}.tar.gz
 BuildRequires:	cmake ninja
