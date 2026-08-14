@@ -41,7 +41,7 @@ export CMAKE_BUILD_DIR=build-qt6
 	-G Ninja
 cd ..
 
-%cmake_kde5 \
+%cmake \
 	-DENABLE_BSYMBOLICFUNCTIONS:BOOL=ON \
 	-G Ninja
 
